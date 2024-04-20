@@ -15,6 +15,7 @@ mod flight;
 mod hello_world;
 mod temp_converter;
 mod timer;
+mod async_action;
 
 #[wasm_bindgen(start)]
 pub fn run() -> Result<(), JsValue> {
@@ -51,6 +52,7 @@ async fn container(f: impl Future, is_7guis: bool) {
 pub async fn everything() {
     join((
         "Async UI Demo".render(),
+        container(async_action::async_action(), false),
         container(hello_world::hello_world(), false),
         container(counter::counter(), true),
         container(clock::digital(), false),

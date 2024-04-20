@@ -16,6 +16,11 @@ console_error_panic_hook = "0.1.6"
 gloo-timers = { version = "0.2.6", features = ["futures"] }
 time = { version = "0.3.21", features = ["wasm-bindgen", "local-offset", "parsing", "macros", "formatting"] }
 futures-lite = "1.13.0"
+futures-signals = "0.3.33"
+wasm-bindgen-test = "0.3.42"
+futures = "0.3.30"
+rand = { version = "0.8.5"}
+getrandom = {version = "0.2.14", features = ["js"]}
 
 [dependencies.web-sys]
 version = "0.3.56"
